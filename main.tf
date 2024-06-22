@@ -38,7 +38,7 @@ resource "aws_s3_bucket_object" "app_zip" {
 resource "aws_elastic_beanstalk_environment" "tf-tic-tac-toe-env" {
   name                = "tic-tac-toe-env"
   application = aws_elastic_beanstalk_application.tf-tic-tac-toe.name
-  solution_stack_name = "64bit Amazon Linux 2023 v4.3.1 running Docker" #64bit Amazon Linux 2023/4.3.0 running Docker" Docker running on 64bit Amazon Linux 2023/4.3.0
+  solution_stack_name = "64bit Amazon Linux 2023 v4.3.3 running Docker" #64bit Amazon Linux 2023/4.3.0 running Docker" Docker running on 64bit Amazon Linux 2023/4.3.0
   version_label = aws_elastic_beanstalk_application_version.default.name
   tier = "WebServer"
   setting {
