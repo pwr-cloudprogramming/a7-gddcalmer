@@ -1,0 +1,14 @@
+{
+    "AWSEBDockerrunVersion": "1",
+    "Logging": "/tmp/tic-tac-toe-app",
+    "Image": {
+    "Update": "false"
+    },
+    "Ports": [
+        {
+          "ContainerPort": 3000,
+          "HostPort": 80
+        }
+      ]
+    }
+    

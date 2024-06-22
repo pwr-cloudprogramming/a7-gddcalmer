@@ -1,0 +1,11 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./Tic-tac-toe  # Path to your frontend Dockerfile or Docker build context
+      args:
+        - PUBLIC_IP=${PUBLIC_IP}
+    ports:
+      - "8081:3000"  # Map container port to host port
+    env_file:
+      - .env
