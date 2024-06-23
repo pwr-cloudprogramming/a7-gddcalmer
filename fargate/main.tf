@@ -16,7 +16,7 @@ resource "aws_ecs_cluster" "default" {
 resource "aws_ecs_service" "tic_tac_toe_service" {
   name                               = "app_TicTacToe_Service_backend"
   cluster                            = aws_ecs_cluster.default.id
-  task_definition                    = aws_ecs_task_definition.backend.arn
+  task_definition                    = aws_ecs_task_definition.app.arn
   desired_count                      = 1
   enable_ecs_managed_tags = true
   wait_for_steady_state   = true
