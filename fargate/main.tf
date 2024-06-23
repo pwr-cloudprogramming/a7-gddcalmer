@@ -44,8 +44,8 @@ resource "aws_ecs_task_definition" "app" {
   family                   = "app_ECS_TaskDefinition_app"
   network_mode             = "awsvpc"
   requires_compatibilities = ["FARGATE"]
-  execution_role_arn       = "arn:aws:iam::339713018133:role/LabRole"
-  task_role_arn            = "arn:aws:iam::339713018133:role/LabRole"
+  execution_role_arn       = data.aws_iam_role.existing_role.arn
+  task_role_arn            = data.aws_iam_role.existing_role.arn
   cpu                      = 512
   memory                   = 1024
   
